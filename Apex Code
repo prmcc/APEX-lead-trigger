@@ -1,26 +1,26 @@
 trigger IsClone on Lead (before insert, before update) {
     for (Lead l : Trigger.new){
         if(l.isclone()){
-            l.Spouse_Name_Lookup__c 				= l.getCloneSourceId();
-            l.Status								= 'Qualified';
-            l.Velocify_Status__c					= 'Qualified';
-            l.Velo__Leads360_MileStoneId__c			= 2;
-            l.Tune_AffiliateID__c 					= null;	
-            l.Tune_Offer_ID__c						= null;
-            l.Tune_Transaction_ID__c				= null;
-            l.Sum_of_Closed_Won_Deals__c			= null;
-			l.Count_of_Closed_Won_Deals__c			= null;
-			l.Sum_of_Profit_Amount__c				= null;
-            l.Count_of_Deals_Not_Closed_Won__c		= null;
-            l.Average_Closed_Won_Deal_Size__c		= null;
-            l.Most_Recent_Closed_Won_Date__c		= null;
-            l.Oldest_Closed_Won_Date__c				= null;
-            l.GCLID__c 								= null;
-            l.Notes__c								= null;
-            l.IsConverted__c						= False;
-            l.Converted_Date__c						= null;
-            l.clone__c								= True;
-            l.msclkid__c 							= null;       
+            l.Spouse_Name_Lookup__c 		= l.getCloneSourceId();
+            l.Status				= 'Qualified';
+            l.Velocify_Status__c		= 'Qualified';
+            l.Velo__Leads360_MileStoneId__c	= 2;
+            l.Tune_AffiliateID__c 		= null;	
+            l.Tune_Offer_ID__c			= null;
+            l.Tune_Transaction_ID__c		= null;
+            l.Sum_of_Closed_Won_Deals__c	= null;
+	    l.Count_of_Closed_Won_Deals__c	= null;
+	    l.Sum_of_Profit_Amount__c		= null;
+            l.Count_of_Deals_Not_Closed_Won__c	= null;
+            l.Average_Closed_Won_Deal_Size__c	= null;
+            l.Most_Recent_Closed_Won_Date__c	= null;
+            l.Oldest_Closed_Won_Date__c		= null;
+            l.GCLID__c 				= null;
+            l.Notes__c				= null;
+            l.IsConverted__c			= False;
+            l.Converted_Date__c			= null;
+            l.clone__c				= True;
+            l.msclkid__c 			= null;       
                         
             
         }
